@@ -1,3 +1,6 @@
+/* Given an array of ints, return the number of times that two 6's are next to
+each other in the array. Also count instances where the second "6" is actually a 7 */
+
 package com.company;
 
 import java.util.Arrays;
@@ -20,7 +23,7 @@ public class Exercise_3 {
     }
 
     static int[] initializingArray(int[] array, Scanner scanner) {
-        System.out.print("Enter the array values: ");
+        System.out.println("Enter the array values: ");
         for (int i = 0; i < array.length; i++) {
             array[i] = scanner.nextInt();
         }

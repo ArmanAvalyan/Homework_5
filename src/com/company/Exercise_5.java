@@ -1,3 +1,5 @@
+// Write a Java method to check whether a year (integer) entered by the user is a leap year or not
+
 package com.company;
 
 import java.util.Scanner;
@@ -13,15 +15,10 @@ public class Exercise_5 {
     }
 
     static boolean isLapYear(int year) {
-        boolean a = true;
-        boolean b = true;
-        boolean c = true;
+        boolean a, b, c;
         a = (year % 4 == 0);
         b = (year % 100 != 0);
         c = ((year % 400 == 0) && (year % 100 == 0));
         return a && (b || c);
-
     }
-
-
 }

@@ -1,3 +1,5 @@
+// Create a function that finds all even numbers from 1 to the given number
+
 package com.company;
 
 import java.util.Arrays;
@@ -26,22 +28,21 @@ public class Exercise_4 {
     static int countEven(int bound) {
         int count = 0;
         for (int i = 1; i <= bound; i++) {
-            boolean isEven = isEven(i);
-            if (isEven) {
+            if (isEven(i)) {
                 count++;
             }
         }
         return count;
     }
 
-    public static int[] arrayWithEvenNumbers(int number){
+    public static int[] arrayWithEvenNumbers(int number) {
         int length = countEven(number);
         int[] array = new int[length];
         int index = 0;
         for (int i = 1; i <= number; i++) {
             if (isEven(i)) {
-              array[index] = i;
-              index ++;
+                array[index] = i;
+                index++;
             }
         }
         return array;
