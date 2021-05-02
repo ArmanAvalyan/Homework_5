@@ -19,6 +19,7 @@ public class Exercise_6 {
         printArray(firstArray);
         printArray(secondArray);
         printArray(getCommonElements(firstArray, secondArray));
+
     }
 
     static void printArray(int[] array) {
@@ -44,17 +45,20 @@ public class Exercise_6 {
     }
 
     static int[] getCommonElements(int[] firstArray, int[] secondArray) {
-        int[] resultArray = new int[15];
+        int[] array = new int[40];
         int indexOfResult = 0;
         for (int i = 0; i < firstArray.length; i++) {
-            for (int j = i; j < secondArray.length; j++) {
-                if (firstArray[i] == secondArray[j] && compareTheSameValues(resultArray, firstArray[i])) {
-                    resultArray[indexOfResult] = firstArray[i];
+            for (int j = 0; j < secondArray.length; j++) {
+                if (firstArray[i] == secondArray[j] && compareTheSameValues(array, firstArray[i])) {
+                    array[indexOfResult] = firstArray[i];
                     indexOfResult++;
                     break;
                 }
             }
         }
+        int newLength = array.length - (array.length - indexOfResult);
+        int[] resultArray = Arrays.copyOf(array, newLength);
+
         return resultArray;
     }
 }
