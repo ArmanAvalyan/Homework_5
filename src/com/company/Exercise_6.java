@@ -2,7 +2,6 @@
 
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -19,10 +18,11 @@ public class Exercise_6 {
         int[] secondArray = initializingArray(secondLength);
         printArray(firstArray);
         printArray(secondArray);
-        printArray(commonElements(firstArray, secondArray));
+        printArray(getCommonElements(firstArray, secondArray));
     }
 
     static void printArray(int[] array) {
+
         System.out.println(Arrays.toString(array));
     }
 
@@ -35,7 +35,7 @@ public class Exercise_6 {
         return array;
     }
 
-    static boolean compare(int[] array, int number) {
+    static boolean compareTheSameValues(int[] array, int number) {
         for (int i : array) {
             if (i == number)
                 return false;
@@ -43,18 +43,18 @@ public class Exercise_6 {
         return true;
     }
 
-    static int[] commonElements(int[] firstArray, int[] secondArray) {
-        int[] result = new int[15];
-        int newIndex = 0;
+    static int[] getCommonElements(int[] firstArray, int[] secondArray) {
+        int[] resultArray = new int[15];
+        int indexOfResult = 0;
         for (int i = 0; i < firstArray.length; i++) {
             for (int j = i; j < secondArray.length; j++) {
-                if (firstArray[i] == secondArray[j] && compare(result, firstArray[i])) {
-                    result[newIndex] = firstArray[i];
-                    newIndex++;
+                if (firstArray[i] == secondArray[j] && compareTheSameValues(resultArray, firstArray[i])) {
+                    resultArray[indexOfResult] = firstArray[i];
+                    indexOfResult++;
                     break;
                 }
             }
         }
-        return result;
+        return resultArray;
     }
 }
