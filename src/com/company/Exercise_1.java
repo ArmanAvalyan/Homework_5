@@ -21,7 +21,6 @@ public class Exercise_1 {
             sum += number % 10;
             number /= 10;
         }
-
         return sum;
     }
 }
