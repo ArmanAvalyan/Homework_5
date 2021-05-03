@@ -45,7 +45,7 @@ public class Exercise_6 {
     }
 
     static int[] getCommonElements(int[] firstArray, int[] secondArray) {
-        int length = Math.max(firstArray.length, secondArray.length);
+        int length = Math.min(firstArray.length, secondArray.length);
         int[] array = new int[length];
         int indexOfResult = 0;
         for (int i = 0; i < firstArray.length; i++) {
