@@ -3,7 +3,6 @@
 package com.company;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Exercise_6 {
@@ -19,7 +18,6 @@ public class Exercise_6 {
         printArray(firstArray);
         printArray(secondArray);
         printArray(getCommonElements(firstArray, secondArray));
-
     }
 
     static void printArray(int[] array) {
@@ -28,10 +26,10 @@ public class Exercise_6 {
     }
 
     static int[] initializingArray(int length) {
-        Random random = new Random();
         int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(8);
+            int random = (int) (Math.random() * 6 + 1);
+            array[i] = random;
         }
         return array;
     }
