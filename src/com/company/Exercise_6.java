@@ -57,7 +57,7 @@ public class Exercise_6 {
                 }
             }
         }
-        int newLength = array.length - (array.length - indexOfResult);
+        int newLength = indexOfResult;
         int[] resultArray = Arrays.copyOf(array, newLength);
 
         return resultArray;
